@@ -1,0 +1,163 @@
+/* popup.css — styles for Focus Timer popup */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 280px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+}
+
+.container {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e94560;
+  letter-spacing: 1px;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  padding: 6px 20px;
+  border: 2px solid #e94560;
+  border-radius: 20px;
+  background: transparent;
+  color: #e94560;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: #e94560;
+  color: #fff;
+}
+
+/* ── Progress ring with timer inside ── */
+.progress-ring-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #16213e;
+  stroke-width: 10;
+}
+
+.ring-fg {
+  fill: none;
+  stroke: #e94560;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* hide the old text display */
+.timer-display { display: none; }
+
+.timer-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 22px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-primary {
+  background: #e94560;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #16213e;
+  color: #aaa;
+  border: 1px solid #333;
+}
+
+/* ── Session counter ── */
+.session-info {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ── Settings ── */
+.settings {
+  width: 100%;
+  background: #16213e;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.setting-row input {
+  width: 60px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn-save {
+  background: #0f3460;
+  color: #eee;
+  font-size: 12px;
+  padding: 6px 0;
+  width: 100%;
+  border-radius: 8px;
+}

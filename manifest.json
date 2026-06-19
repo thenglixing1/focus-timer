@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Timer",
+  "version": "1.0",
+  "description": "A Pomodoro-style focus timer with browser notifications to help you stay productive.",
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "icons": {
+    "48": "icons/icon48.png"
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Timer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Focus Timer📖</h1>
+
+    <!-- Mode tabs -->
+    <div class="tabs">
+      <button class="tab active" id="tab-focus">Focus</button>
+      <button class="tab" id="tab-break">Break</button>
+    </div>
+
+    <!-- Timer display -->
+    <div class="timer-display" id="timer-display">25:00</div>
+
+    <!-- Progress ring -->
+    <div class="progress-ring-container">
+      <svg class="progress-ring" width="160" height="160">
+        <circle class="ring-bg" cx="80" cy="80" r="70"/>
+        <circle class="ring-fg" id="ring-fg" cx="80" cy="80" r="70"
+          stroke-dasharray="439.82"
+          stroke-dashoffset="0"/>
+      </svg>
+      <div class="timer-center" id="timer-center">25:00</div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary" id="btn-start">▶ Start</button>
+      <button class="btn btn-secondary" id="btn-reset">↺ Reset</button>
+    </div>
+
+    <!-- Session counter -->
+    <div class="session-info">
+      <span>Sessions today: <strong id="session-count">0</strong></span>
+    </div>
+
+    <!-- Custom time inputs -->
+    <div class="settings">
+      <div class="setting-row">
+        <label>Focus (min)</label>
+        <input type="number" id="focus-minutes" value="25" min="1" max="60"/>
+      </div>
+      <div class="setting-row">
+        <label>Break (min)</label>
+        <input type="number" id="break-minutes" value="5" min="1" max="30"/>
+      </div>
+      <button class="btn btn-save" id="btn-save">Save Settings</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
