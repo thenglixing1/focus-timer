@@ -1,0 +1,12 @@
+This focus timer can help solvw problem of lack of focus when study or working
+this focus timer is similar like the pomodoro technique, it is about 25 minit start 
+working and rest 5 minit, help user can focus to complete they work. 
+Besides that, I used chrome.storage to save the 
+timer settings and session count across browser sessions, used
+chrome.alarms for the background countdown logic, and  
+chrome.notifications to alert the user when the timer ends.
+
+in this assignment ,i learn about have both of the extension can correctly work together
+Since this was the first time I was learning something new, such as manifest.json, 
+I didn't quite understand what it was for at first. However, while doing this assignment, 
+I came to understand some of its functions.
